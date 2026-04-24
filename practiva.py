@@ -19,5 +19,6 @@ for i in name:
     else:
          consonantes=consonantes+1
         print("la cantidad de vocales son {vocales}")
+    
         print("el numero de consonantes son {consonantes}")
 
