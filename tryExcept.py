@@ -196,38 +196,69 @@
 # tiene un descuento del 10% sobre el precio final
 # Mostrar el valor a pagar al final 
 
-import random
+# import random
 
-codigo=random.randint(7000,21000)
+# codigo=random.randint(7000,21000)
 
-print(f"tu codigo es {codigo}")
+# print(f"tu codigo es {codigo}")
 
-print("1.- VIP ")
+# print("1.- VIP ")
 
-print("2.- General ")
+# print("2.- General ")
 
-print("3.- Tribuna ")
+# print("3.- Tribuna ")
 
-op=int(input())
-
-
-
-if op==1:
- print (f"el precio solo de la entrada es de {40000*1.8}")
- pf=40000*1.8
-elif op==2:
- print (f"el precio solo de la entrada es de {40000*1.4}")
- pf=40000*1.4
-elif op==3:
- print (f"el precio solo de la entrada es de {40000*1.2}")
- pf=40000*1.2
-else:
- print ("entrada no valida")
+# op=int(input())
 
 
 
-if codigo>6999 or codigo<21001:
+# if op==1:
+#  print (f"el precio solo de la entrada es de {40000*1.8}")
+#  pf=40000*1.8
+# elif op==2:
+#  print (f"el precio solo de la entrada es de {40000*1.4}")
+#  pf=40000*1.4
+# elif op==3:
+#  print (f"el precio solo de la entrada es de {40000*1.2}")
+#  pf=40000*1.2
+# else:
+#  print ("entrada no valida")
 
- pf=pf*0.9
 
-print(f"el precio a pagar con el descuento será de {pf}")
+
+# if codigo>6999 or codigo<21001:
+
+#  pf=pf*0.9
+
+# print(f"el precio a pagar con el descuento será de {pf}")
+
+
+
+
+
+while True:
+    try:
+      cantP=int(input("cuantos nultos son?"))
+      break
+    except Exception as e:
+        print("solo valores enteros. Error: ", e)
+
+
+boliviano=0
+bnormales=0
+
+for i in range(cantP):
+   while True:
+        try:
+         bulto=float(input(f"ingrese bulto{i+1} (en kg): "))
+         if bulto <=5:
+            boliviano+=1
+         else:
+            bnormales+=1
+            break
+        except ValueError as e:
+           print("solo valores enteros. error: ", e)
+
+print(f"bultos livianos: {boliviano*1000}")
+print(f"bultos normales: {bnormales*2000}")
+print(f"rl total a pagar es de {boliviano*1000+bnormales*2000}")

@@ -31,7 +31,7 @@
 
 
 for i in "Alex":
-print (i)
+ print (i)
 
 # pregunte al usuario su nombre y muestra sus letras
 print ("ingrese nombre")
