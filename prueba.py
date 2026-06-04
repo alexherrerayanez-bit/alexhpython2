@@ -30,10 +30,42 @@
 #passw="temu"
 
 
-for i in "Alex":
- print (i)
+# for i in "Alex":
+#  print (i)
 
-# pregunte al usuario su nombre y muestra sus letras
-print ("ingrese nombre")
-name=input()
-nombre=input("ingrese su nombre")
+# # pregunte al usuario su nombre y muestra sus letras
+# print ("ingrese nombre")
+# name=input()
+# nombre=input("ingrese su nombre")
+
+
+
+# SIN ARGUMENTO Y CON RETORNO
+
+# suma()
+# def sumaRet():
+#     n1=int(input("ingrese un numero: ")
+#     n2=int(input("ingrese otro numero: "))
+#     return n1+n2
+# res=sumaRet()*4
+# print("el resultado es", res)
+
+# CON ARGUMENTO Y SIN RETORNO
+
+def saludoME(name):
+    print("hola", name)
+
+saludoME("Hola Alex")
+
+
+
+
+
+
+
+
+
+
+
+
+

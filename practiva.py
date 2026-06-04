@@ -25,7 +25,7 @@
 #         print("el numero de consonantes son {consonantes}")
 
 
-import random
+# import random
 
 # num=random.randint(1,9)
 
@@ -65,3 +65,14 @@ import random
 
 
 
+
+
+
+frutas=["naranja", "frutilla", "kiwi", "melon", "frambuesa"]
+
+for f in frutas:
+    if f[-1].lower() == "a":
+        print(f"la fruta {f} termina con a")
+    else: 
+        print(f"la fruta {f} no termina con a")
+        
