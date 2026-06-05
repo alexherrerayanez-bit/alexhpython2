@@ -68,11 +68,105 @@
 
 
 
-frutas=["naranja", "frutilla", "kiwi", "melon", "frambuesa"]
+# frutas=["naranja", "frutilla", "kiwi", "melon", "frambuesa"]
 
-for f in frutas:
-    if f[-1].lower() == "a":
-        print(f"la fruta {f} termina con a")
-    else: 
-        print(f"la fruta {f} no termina con a")
+# for f in frutas:
+#     if f[-1].lower() == "a":
+#         print(f"la fruta {f} termina con a")
+#     else: 
+#         print(f"la fruta {f} no termina con a")
+
+
+
+# juguetes=["yo-yo", "tetris"]
+
+# def agregar():
+#     ju=input("Agregue un juguete: ")
+#     juguete.append(ju)
+
+# def mostrar():
+#     c=1
+#     for j in juguetes:
+#         c=1
+#         print(j,c)
+#         c+=1
+#         print("-"*30)
+
+# def actualizar():
+#     print("que juguete desea actualizar: ")
+#     act=int(input())
+#     nuevojug=input("Ingrese nuevo juguete: ")
+#     juguetes[act-1]=nuevojug
+
+
+# def eliminar():
+#     eliminar=int(input("Que juguete desea eliminar: "))
+#     juguetes.pop(eliminar-1)
+#     print("juguete eliminado")
+
+
+
+# def menuJuguetes():
+# while True:
+#         try:
+#             print("1.- Agregar juguete")
+#             print("2.- Eliminar juguete")
+#             print("3.- Actualizar juguete")
+#             print("4.- Mostrar juguetes")
+#             print("5.- salir")
+#             op=int(input("seleccione una opcion: "))
+#             match op:
+#                 case 1:
+#                     agregar()
+                    
+#                 case 2:
+#                     eliminar()
+                    
+
+#                 case 3:
+#                     actualizar()
+
+                    
+#                 case 4:
+#                     mostrar()
+#                 case 5:
+#                     ("saliendo")
+#                     break
+#                 case _:
+#                     ("error")
         
+
+#         except Exception as e:
+#             print("error :", e)
+
+
+
+
+
+
+
+
+
+
+
+numeros=input("ingrese numeros enteros separados por espacio: ")
+
+listaNumeros=numeros.split()
+listanumerosint=[]
+
+pares=[]
+impares=[]
+
+for n in listaNumeros:
+    listanumerosint.append(int(n))
+    print(n)
+
+for hh in listanumerosint:
+    if hh%2==0:
+        pares.append(hh)
+    else:
+        impares.append(hh)
+print(f"los numeros pares son {pares}")
+print(f"los numeros impares son {impares}")
+
+    
