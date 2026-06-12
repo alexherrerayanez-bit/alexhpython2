@@ -149,24 +149,82 @@
 
 
 
-numeros=input("ingrese numeros enteros separados por espacio: ")
+# numeros=input("ingrese numeros enteros separados por espacio: ")
 
-listaNumeros=numeros.split()
-listanumerosint=[]
+# listaNumeros=numeros.split()
+# listanumerosint=[]
 
-pares=[]
-impares=[]
+# pares=[]
+# impares=[]
 
-for n in listaNumeros:
-    listanumerosint.append(int(n))
-    print(n)
+# for n in listaNumeros:
+#     listanumerosint.append(int(n))
+#     print(n)
 
-for hh in listanumerosint:
-    if hh%2==0:
-        pares.append(hh)
-    else:
-        impares.append(hh)
-print(f"los numeros pares son {pares}")
-print(f"los numeros impares son {impares}")
+# for hh in listanumerosint:
+#     if hh%2==0:
+#         pares.append(hh)
+#     else:
+#         impares.append(hh)
+# print(f"los numeros pares son {pares}")
+# print(f"los numeros impares son {impares}")
 
-    
+
+
+
+# productosDicc={
+#    1:{"nombre": "Maracuyá", "precio": 3000},
+#    2:{"nombre": "Pera", "precio": 1500},
+#    3:{"nombre": "Cebolla", "precio": 1200}
+# }
+# productosDicc[4]={"nombre": "Piña", "precio": 3500}
+# def agregarProducto():
+#    print("Cual es el nombre del producto?")
+#    nombre = input()
+#    print("cual es el precio?")
+#    precio = int(input())
+#    nuevoKey=list(productosDicc.keys())[-1]
+#    productosDicc[nuevoKey+1]= {"nombre": nombre, "precio": precio}
+# def MostrarProducto():
+#    for key, producto in productosDicc.items():
+#       print(f"{key} .{producto}")
+# def eliminarProducto():
+#    MostrarProducto()
+#    borrar=int(input("Cual Producto borrará?: "))
+#    del productosDicc[borrar]
+# def actualizarProducto():
+#    MostrarProducto()
+#    num=int(input("Que producto desea actualizar?: "))
+
+#    nombre=input("Cual es el nombre nuevo?: ")
+#    precio=int(input("Cual es el precio nuevo?: "))
+#    productosDicc[num]={"nombre": nombre, "precio": precio}
+
+
+
+
+
+# while True:
+#     def compra():
+#         mostrarproducto()
+#         try:
+#             com=int(input("que producto va a comprar?: "))
+#             if com in productosDicc.keys():
+#                 carrito.append(productosDicc[com])
+        
+#         except Exception as e:
+#             print("error:", e)
+
+
+
+
+peliculasGOD={
+    1:{"nombre": "ElCaballeroOscuro", "precio": 5000},
+    2:{"nombre": "ElPadrino", "precio": 4000},
+    3:{"nombre": "OtroDiaParaMatar", "precio": 7000}
+}
+def agregarPelicula():
+    print("Cual es el nombre de la pelicula?: ")
+nombre = input()
+print("Cual es el precio?: ")
+        
