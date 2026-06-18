@@ -218,13 +218,144 @@
 
 
 
-peliculasGOD={
-    1:{"nombre": "ElCaballeroOscuro", "precio": 5000},
-    2:{"nombre": "ElPadrino", "precio": 4000},
-    3:{"nombre": "OtroDiaParaMatar", "precio": 7000}
-}
-def agregarPelicula():
-    print("Cual es el nombre de la pelicula?: ")
-nombre = input()
-print("Cual es el precio?: ")
+# peliculasGOD={
+#     1:{"nombre": "ElCaballeroOscuro", "precio": 5000},
+#     2:{"nombre": "ElPadrino", "precio": 4000},
+#     3:{"nombre": "OtroDiaParaMatar", "precio": 7000}
+# }
+# def agregarPelicula():
+#     print("Cual es el nombre de la pelicula?: ")
+# nombre = input()
+# print("Cual es el precio?: ")
+
+
+
+
+
+
+# Fonasa, Isapre, o Fodesa
+# Al ingresar un paciente, se debe poner la temperatura
+# Crear una funcion que valide si esta grave o no
+# Para que este grave debe tener mas de 39°'''
+# Para que este grave debe tener mas de 39°
+# Cada atencion vale $25.000
+# Los despcuentos corresponden a 
+# FOnasa 54%
+# Isapre 27%
+# Fodesa 12,5%
+
+
+pacientes.append({"nombre": "Alan Brito", "prevision": "Isapre", 
+    "temperatura":39.6, "grave": True})
+
+
+
+
+def validarEstado(tempe):
+    if tempe>39:
+       return True 
+    else:
+       return False
+def mostrarPacientes():
+    if len(pacientes)==0:
+        print("No hay pacientes")
+    else:
+        c=1
+    for p in pacientes:
+        print(f"{c} .- {p}")
+        c+=1
+def agregarPaciente():
+    nombre=input("Ingrese nombre: ")
+    prevision=input("Ingrese prevision: ")
+    temp=float(input("Ingrese temp: "))
+    pacientes.append({"nombre": nombre, "prevision": prevision, 
+            "temperatura":temp, "grave": validarEstado(temp)})
+    print("Paciente agregado al listado")
+    def eliminarPaciente():
+     mostrarPacientes()
+    paci=int(input("Que paciente se vá?: "))
+    pacientes.pop(paci-1)
+    print("Paciente eliminado.")
+    def tomarTemp():
+     mostrarPacientes()
+    paciente=int(input ("A que paciente le tomamos temperatura?: "))
+    tomarTemp=float(input("ingrese su temperatura: "))
+    pacientes[paciente-1]["temperatura"]=tomarTemp
+    pacientes[paciente-1]["grave"]=validarEstado(tomarTemp)
+    def cobrarAtencion():
+     mostrarPacientes()
+    pa=int(input("¿que paciente va a pagar?: "))
+    if pacientes[pa-1]["prevision"].lower()=="fonasa":
+        pagar=25000*0.46
+    elif pacientes[pa-1]["prevision"].lower()=="isapre":
+        pagar=25000*0.73
+    elif pacientes[pa-1]["prevision"].lower()=="fodesa":
+        pagar=25000*0.875
+    else:
+        print("prevision incorrecta")
+        print("Su total a pagar es: ", pagar)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+while True: 
+    try:
+     print("1.- Agregar Paciente")
+     print("2.- Quitar Paciente")
+     print("3.- Tomar temperatura")
+     print("4.- Cobrar Paciente")
+     print("5.- Mostrar Paciente")
+     print("6.- Salir")
+
+     match op:
+        case 1:
+           eliminarpaciente()
+           
+        case 2:
+           print()
         
+        case 3:
+           mostrarPacientes()
+           p=int(input("a que paciente le tomara la temperatura?: "))
+           T=float(input("ingrese nueva temperatura: "))
+           pacientes[p-1]["temperatura"]=T
+           
+        
+        case 4:
+           print()
+           
+        case 5:
+
+        
+     
+
+    except Exception as e:
+       print("error: ", e)
