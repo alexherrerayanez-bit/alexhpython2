@@ -52,13 +52,46 @@
 
 # CON ARGUMENTO Y SIN RETORNO
 
-def saludoME(name):
-    print("hola", name)
+# def saludoME(name):
+#     print("hola", name)
 
-saludoME("Hola Alex")
+# saludoME("Hola Alex")
 
 
 
+
+pinturas=[
+    {"color": "azul", "capacidad": 5000, "formato": "tarro"},
+    {"color": "verde", "capacidad": 2500, "formato": "aerosol"},
+    {"color": "rojo", "capacidad": 3000, "formato": "bolsa"}
+]
+
+
+
+
+
+def funcion(lista, color ):
+    c=input("que color busca?: ")
+    for p in lista:
+        if funcion == color:
+            return print("disponible")
+        else: 
+            return print("el color no  esta disponible", color)
+        
+cae1=input("que color va a elegir?: ")
+
+funcion(pinturas,cae1)
+
+
+
+
+def mostrarpinturas():
+    if len(pinturas)<1:
+        print("no hay pinturas para mostrar")
+    else:
+        c=1
+        for p in pinturas:
+            print(f"{c}.-{p}")
 
 
 
